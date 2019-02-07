@@ -17,6 +17,10 @@ const renderFied = ({ label, keyboardType, name }) => {
 // create a component
 const InputComponent = (props) => {
     const { handleInput } = props
+    submitClick = () => {
+        this.props.submitClick('here')
+        handleInput
+    }
     return (
         <View style={styles.container}>
             <Field component={renderFied} label='Email' />
@@ -37,12 +41,12 @@ const reduxFrom = reduxForm({
     form: 'contact'
 })(InputComponent);
 
-const mapStateToProps=(state)=>({    
+const mapStateToProps = (state) => ({
     dataReducer: state.dataReducer
 })
 
-const mapDispatchToProps=(dispatch)=>({
-    submitClick :(data)=> dispatch({type: SUBMIT_CLICK, data})
+const mapDispatchToProps = (dispatch) => ({
+    submitClick: (data) => dispatch({ type: SUBMIT_CLICK, data })
 })
 
 // define your styles
@@ -57,4 +61,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default connect(mapStateToProps,mapDispatchToProps)(reduxFrom);
+export default connect(mapStateToProps, mapDispatchToProps)(reduxFrom);

@@ -8,13 +8,13 @@
  */
 
 import React, { Component } from 'react';
-import {  } from 'react-native';
+// import {  } from 'react-native';
 import { Provider } from 'react-redux'
 import store from './src/redux/store'
 import Form from './src/screens/Form'
 
 const handleInput = () => {
-  alert(`Submitted = `)
+  alert(`Submitted`)
 }
 export default class App extends Component {
   render() {
