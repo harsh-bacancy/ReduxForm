@@ -11,7 +11,7 @@ import React, { Component } from 'react';
 // import {  } from 'react-native';
 import { Provider } from 'react-redux'
 import store from './src/redux/store'
-import Form from './src/screens/Form'
+import ContactForm from './src/screens/ContactForm'
 
 // const handleInput = () => {
 //   alert(`Submitted`)
@@ -20,7 +20,7 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Form />
+        <ContactForm />
       </Provider>
     );
   }
